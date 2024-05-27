@@ -30,3 +30,18 @@ y_pred = linear_reg_model.predict(x) # 예측
 plt.scatter(x,y)
 plt.plot(x, y_pred)
 
+#%%
+from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_squared_log_error, r2_score
+MAE = mean_absolute_error(y, y_pred)
+MSE = mean_squared_error(y,y_pred)
+RMSE = np.sqrt(MSE)
+MSLE = mean_squared_log_error(y,y_pred)
+RMSLE = np.sqrt(MSLE)
+R2 = r2_score(y, y_pred)
+
+print(f"MAE:\t {MAE:.4f}")
+print(f"MSE:\t {MSE:.4f}")
+print(f"RMSE:\t {RMSE:.4f}")
+print(f"MSLE:\t {MSLE:.4f}")
+print(f"RMSLE:\t {RMSLE:.4f}")
+print(f"R2:\t {R2:.4f}")
